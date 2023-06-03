@@ -1,9 +1,10 @@
 import sum from './basic';
 
-export default function checkHealthStatus(character) {
-  if (character.health > 50) {
+export default function getHealthStatus(character) {
+  const { health } = character;
+  if (health > 50) {
     return 'healthy';
-  } if (character.health > 15) {
+  } if (health > 15) {
     return 'wounded';
   }
   return 'critical';
